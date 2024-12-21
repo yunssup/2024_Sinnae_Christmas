@@ -16,8 +16,8 @@ const Second = () => {
   return (
     <S.Container>
       <S.Card>
-        <S.Header>2024 성탄제의 주제성구가</S.Header>
-        <S.MidHeader>아닌 것을 고르시오!</S.MidHeader>
+        <S.Header>2024 성탄제의 주제성구로</S.Header>
+        <S.MidHeader>올바른 것을 고르시오!</S.MidHeader>
         <S.GridContainer>
           <S.GridItem onClick={() => handleTextClick("오답1")}>
           하느님, 저희를 다시 일으켜 주소서. 당신 얼굴을 비추소서. 저희가 구원되리이다.
