@@ -29,7 +29,7 @@ const Third = () => {
             <img src="/image/현제2.jpg" alt="이미지 3" />
           </S.GridItem>
           <S.GridItem onClick={() => handleImageClick("서현")}>
-            <img src="/image/성윤.jpg" alt="이미지 4" />
+            <img src="/image/서현.jpg" alt="이미지 4" />
           </S.GridItem>
         </S.GridContainer>
       </S.Card>

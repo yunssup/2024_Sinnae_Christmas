@@ -3,28 +3,29 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import * as S from "./Style"; 
 
-const Start = () => {
+const Finish = () => {
   const navigate = useNavigate(); 
 
   const handleStartClick = () => {
-    navigate("/"); // "/start" 경로로 이동
+    navigate("/"); // "/" 경로로 이동
   };
 
   return (
     <S.Container>
       <S.Card>
-        <h1>재시작 하시겠습니까?</h1>
+        <h1>당신은 신내동성당 중고등부입니까?</h1>
         <S.CheckboxContainer>
           <S.Recaptcha>
-            <span>당신은 신내동성당 중고등부가 아닙니다 ㅡㅡ+</span>
+            <S.RecaptchaLogo />
+            <span>당신은 신내동성당 중고등부 학생입니다❤️</span>
           </S.Recaptcha>
         </S.CheckboxContainer>
         <S.StartButton onClick={handleStartClick}>
-          재시작하기
+          ❤️ 간식 받아가기 ❤️
         </S.StartButton>
       </S.Card>
     </S.Container>
   );
 };
 
-export default Start;
+export default Finish;

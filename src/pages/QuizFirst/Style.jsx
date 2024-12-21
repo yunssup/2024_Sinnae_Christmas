@@ -51,6 +51,18 @@ export const GridContainer = styled.div`
   box-sizing: border-box;
 `;
 
+// 이미지 그리드 컨테이너
+export const GridContainer2 = styled.div`
+  display: flex;
+  grid-template-columns: repeat(2, 1fr); /* 2열 배치 */
+  gap: 8px; /* 이미지 간격 */
+  padding: 16px;
+  background-color: #f9fafb;
+  height: calc(100% - 100px); /* 헤더를 제외한 나머지 공간 */
+  box-sizing: border-box;
+  flex-direction: column;
+`;
+
 // 그리드 아이템 (4칸 이미지)
 export const GridItem = styled.div`
   width: 100%;
@@ -74,6 +86,31 @@ export const GridItem = styled.div`
     filter: brightness(0.9);
   }
 `;
+
+// 그리드 아이템 (4칸 이미지)
+export const GridItem2 = styled.div`
+  display: flex;
+  width: 100%;
+  padding-top: calc(50% - 8px); /* 높이를 카드 높이에 맞춤 */
+  position: relative;
+  border-radius: 4px;
+  cursor: pointer;
+  overflow: hidden;
+  border: 3px solid gray;
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &:hover {
+    filter: brightness(0.9);
+  }
+`;
+
 
 // 푸터 영역
 export const Footer = styled.div`
