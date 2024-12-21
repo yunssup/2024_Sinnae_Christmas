@@ -59,6 +59,7 @@ export const GridItem = styled.div`
   border-radius: 4px;
   cursor: pointer;
   overflow: hidden;
+  border: 3px solid gray;
 
   img {
     position: absolute;
