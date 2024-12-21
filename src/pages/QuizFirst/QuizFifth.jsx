@@ -16,8 +16,8 @@ const Fifth = () => {
   return (
     <S.Container>
       <S.Card>
-        <S.Header>다음 중 신내동성당 최고 멋쟁이를</S.Header>
-        <S.MidHeader>고르시오!</S.MidHeader>
+        <S.Header>다음 중 신내동성당의</S.Header>
+        <S.MidHeader>최고 멋쟁이를 고르시오!</S.MidHeader>
         <S.GridContainer2>
           <S.GridItem2 onClick={() => handleImageClick("정답")}>
             <img src="/image/단체1.jpg" alt="이미지 1" />
