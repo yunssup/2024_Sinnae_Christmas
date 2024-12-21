@@ -16,7 +16,7 @@ const Start = () => {
         <S.Title>재시작 하시겠습니까?</S.Title>
         <S.CheckboxContainer>
           <S.Recaptcha>
-            <span>당신은 신내동성당 중고등부가 아닙니다 ㅡㅡ+</span>
+            <S.span>당신은 신내동성당 중고등부가 아닙니다 ㅡㅡ+</S.span>
           </S.Recaptcha>
         </S.CheckboxContainer>
         <S.StartButton onClick={handleStartClick}>

@@ -13,10 +13,9 @@ const Finish = () => {
   return (
     <S.Container>
       <S.Card>
-        <S.Title>당신은 신내동성당 중고등부입니까?</S.Title>
+        <S.Title>최고!!!</S.Title>
         <S.CheckboxContainer>
           <S.Recaptcha>
-            <S.RecaptchaLogo />
             <S.span>당신은 신내동성당 중고등부 학생입니다❤️</S.span>
           </S.Recaptcha>
         </S.CheckboxContainer>

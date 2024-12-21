@@ -71,12 +71,23 @@ export const GridContainer2 = styled.div`
 export const GridItem = styled.div`
   position: relative;
   width: 100%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
   aspect-ratio: 1; /* 정사각형 비율 */
   border-radius: 8px;
   cursor: pointer;
   overflow: hidden;
   border: 2px solid #e5e7eb;
   transition: transform 0.2s, box-shadow 0.2s;
+  text-align: center;
+  font-size: 16px; /* 텍스트 크기 */
+  font-weight: 500; /* 텍스트 두께 */
+  color: #374151; /* 텍스트 색상 */
+  background-color: #ffffff; /* 배경색 */
+  border-radius: 8px; /* 모서리 둥글게 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.2s, color 0.2s;
 
   img {
     position: absolute;
