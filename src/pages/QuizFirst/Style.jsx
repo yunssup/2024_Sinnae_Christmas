@@ -5,73 +5,78 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
-  background-color: #f0f4f8;
+  background-color: #f9fafb;
+  padding: 16px;
+  box-sizing: border-box;
 `;
 
 // 카드 레이아웃
 export const Card = styled.div`
-  width: 50vw; /* 카드 너비 */
-  height: 70vh; /* 카드 높이 */
-
+  width: 90%;
+  max-width: 500px; /* 최대 너비 설정 */
   background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: scale(1.02);
+  }
 `;
 
 // 헤더 스타일
 export const Header = styled.div`
-  background-color: #4285f4;
+  background-color: #2563eb;
   color: white;
-  padding: 12px;
+  padding: 16px;
   text-align: center;
-  font-size: 22px;
+  font-size: 24px;
   font-weight: bold;
 `;
 
+// 중간 헤더
 export const MidHeader = styled.div`
-  background-color: #4285f4;
+  background-color: #3b82f6;
   color: white;
-  padding: 10px 0;
+  padding: 12px;
   text-align: center;
-  font-size: 16px;
-  font-weight: bold;
+  font-size: 18px;
+  font-weight: 600;
 `;
 
 // 이미지 그리드 컨테이너
 export const GridContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 2열 배치 */
-  gap: 8px; /* 이미지 간격 */
+  gap: 12px; /* 이미지 간격 */
   padding: 16px;
   background-color: #f9fafb;
-  height: calc(100% - 100px); /* 헤더를 제외한 나머지 공간 */
   box-sizing: border-box;
 `;
 
-// 이미지 그리드 컨테이너
+// 세로 배열을 위한 플렉스 컨테이너
 export const GridContainer2 = styled.div`
   display: flex;
-  grid-template-columns: repeat(2, 1fr); /* 2열 배치 */
-  gap: 8px; /* 이미지 간격 */
+  flex-direction: column; /* 세로 배열 */
+  gap: 12px;
   padding: 16px;
   background-color: #f9fafb;
-  height: calc(100% - 100px); /* 헤더를 제외한 나머지 공간 */
   box-sizing: border-box;
-  flex-direction: column;
 `;
 
-// 그리드 아이템 (4칸 이미지)
+// 그리드 아이템
 export const GridItem = styled.div`
-  width: 100%;
-  padding-top: calc(50% - 8px); /* 높이를 카드 높이에 맞춤 */
   position: relative;
-  border-radius: 4px;
+  width: 100%;
+  aspect-ratio: 1; /* 정사각형 비율 */
+  border-radius: 8px;
   cursor: pointer;
   overflow: hidden;
-  border: 3px solid gray;
+  border: 2px solid #e5e7eb;
+  transition: transform 0.2s, box-shadow 0.2s;
 
   img {
     position: absolute;
@@ -83,34 +88,25 @@ export const GridItem = styled.div`
   }
 
   &:hover {
-    filter: brightness(0.9);
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   }
 `;
 
-// 그리드 아이템 (4칸 이미지)
-export const GridItem2 = styled.div`
+// 세로형 그리드 아이템
+export const GridItem2 = styled(GridItem)`
+  aspect-ratio: unset;
+  height: 120px;
   display: flex;
-  width: 100%;
-  padding-top: calc(50% - 8px); /* 높이를 카드 높이에 맞춤 */
-  position: relative;
-  border-radius: 4px;
-  cursor: pointer;
-  overflow: hidden;
-  border: 3px solid gray;
-  img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+  align-items: center;
+  justify-content: center;
 
-  &:hover {
-    filter: brightness(0.9);
+  img {
+    width: auto;
+    height: 100%;
+    object-fit: contain;
   }
 `;
-
 
 // 푸터 영역
 export const Footer = styled.div`
@@ -118,7 +114,7 @@ export const Footer = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 16px;
-  background-color: #f9fafb;
+  background-color: #f3f4f6;
 `;
 
 // 푸터 아이콘 버튼
@@ -129,32 +125,35 @@ export const FooterButton = styled.button`
   padding: 0;
 
   svg {
-    width: 24px;
-    height: 24px;
-    color: #9ca3af;
+    width: 28px;
+    height: 28px;
+    color: #6b7280;
 
     &:hover {
-      color: #6b7280;
+      color: #4b5563;
     }
   }
 `;
 
 // 확인 버튼
 export const ConfirmButton = styled.button`
-  background-color: #4285f4;
+  background-color: #3b82f6;
   color: white;
   border: none;
-  border-radius: 4px;
-  padding: 10px 20px;
+  border-radius: 8px;
+  padding: 12px 24px;
   font-size: 16px;
+  font-weight: bold;
   cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
 
   &:disabled {
-    background-color: #a1c2fa;
+    background-color: #93c5fd;
     cursor: not-allowed;
   }
 
   &:hover:enabled {
-    background-color: #357ae8;
+    background-color: #2563eb;
+    transform: translateY(-2px);
   }
 `;

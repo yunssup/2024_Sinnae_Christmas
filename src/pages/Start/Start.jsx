@@ -22,7 +22,7 @@ const Start = () => {
   return (
     <S.Container>
       <S.Card>
-        <h1>당신은 신내동성당 중고등부입니까?</h1>
+        <S.Title>당신은 신내동성당 중고등부입니까?</S.Title>
         <S.CheckboxContainer>
           <S.CustomCheckbox>
             <S.CheckboxInput
@@ -30,11 +30,10 @@ const Start = () => {
               checked={isChecked}
               onChange={handleCheckboxChange}
             />
-            <span>저는 신내동성당 중고등부입니다.</span>
+            <S.span>저는 신내동성당 중고등부입니다.</S.span>
           </S.CustomCheckbox>
           <S.Recaptcha>
-            <S.RecaptchaLogo />
-            <span>정말인지 확인해본다ㅋㅋ</span>
+            <S.boxspan>신내동성당 중고등부 인증 바로가기</S.boxspan>
           </S.Recaptcha>
         </S.CheckboxContainer>
         <S.StartButton disabled={!isChecked} onClick={handleStartClick}>

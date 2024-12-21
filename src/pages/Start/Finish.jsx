@@ -13,11 +13,11 @@ const Finish = () => {
   return (
     <S.Container>
       <S.Card>
-        <h1>당신은 신내동성당 중고등부입니까?</h1>
+        <S.Title>당신은 신내동성당 중고등부입니까?</S.Title>
         <S.CheckboxContainer>
           <S.Recaptcha>
             <S.RecaptchaLogo />
-            <span>당신은 신내동성당 중고등부 학생입니다❤️</span>
+            <S.span>당신은 신내동성당 중고등부 학생입니다❤️</S.span>
           </S.Recaptcha>
         </S.CheckboxContainer>
         <S.StartButton onClick={handleStartClick}>

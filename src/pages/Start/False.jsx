@@ -13,7 +13,7 @@ const Start = () => {
   return (
     <S.Container>
       <S.Card>
-        <h1>재시작 하시겠습니까?</h1>
+        <S.Title>재시작 하시겠습니까?</S.Title>
         <S.CheckboxContainer>
           <S.Recaptcha>
             <span>당신은 신내동성당 중고등부가 아닙니다 ㅡㅡ+</span>
